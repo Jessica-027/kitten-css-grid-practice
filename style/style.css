@@ -1,0 +1,9 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #f5a5b8;
+    --secondary: #f4ede4;
+    --radius: 1rem;
+}
