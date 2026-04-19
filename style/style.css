@@ -39,6 +39,12 @@ img {
     border-radius: 10%;
 }
 
+h4{
+    font-family: var(--font-title);
+    font-weight: var(--font-weight-medium);
+}
+
+
 .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -102,7 +108,7 @@ HEADER
 
 .main-kitten {
     grid-column: span 12;
-    margin: 3rem 1.5rem;
+    margin: 3rem 1.5rem 0 1.5rem;
 }
 
 
@@ -175,6 +181,7 @@ HEADER
 .hero-btn__white {
     border: 1px solid var(--primary-color);
     background-color: #fff;
+    color: var(--font-color);
 }
 
 .hero-kitten__img {
@@ -384,8 +391,12 @@ RESOURCES
     padding-top: .2rem;
 }
 
+/*========
+ PRATICE 
+ ========*/
+
 .practice-kitten{
-    filter: drop-shadow(5px 5px 6px var(--gray-color));
+    filter: drop-shadow(6px 6px 7px var(--gray-color));
     background-color: var(--card-color);
     border-radius: var(--radius);
     padding: 3rem 2rem;
@@ -462,6 +473,101 @@ RESOURCES
     background-color: #f5a5b8;
 }
 
+/*==== 
+FOOTER 
+======*/
+
 .footer-kitten {
     grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 3rem 1.5rem 0 1.5rem;
 }
+
+.footer-kitten__info{
+    grid-column: span 3;
+    grid-row: 1;
+}
+
+/*=== 
+ INFO 
+====*/
+
+.info-logo__text{
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+    color: var(--paragraph-color);
+}
+
+.info-logo__social{
+    display: flex;
+    gap: .9rem;
+}
+
+.logo-social{
+    padding: .5rem;
+    background-color: var(--background-assent);
+    border-radius: 50%;
+}
+
+/*====== 
+ PRODUCTS
+=======*/
+
+.footer-kitten__products{
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+
+.footer-kitten__products{
+
+}
+
+
+.footer-kitten__company{
+    grid-column: 2 / 3;
+    grid-row: 2;
+}
+
+.footer-kitten__support{
+    grid-column: 3 / 4;
+    grid-row: 2;
+}
+
+.footer-kitten__copyright{
+    grid-column: 1 / -1;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    color: var(--paragraph-color);
+    font-size: 1rem;
+
+}
+
+
+
+.lucide-heart{
+    color: var(--primary-color);
+
+}
+
+
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    gap: .5rem;
+    
+}
+
+.footer-list a{
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+    text-decoration: none;
+    color: var(--paragraph-color);   
+}
+
+
