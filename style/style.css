@@ -17,6 +17,7 @@
     --font-weight-medium: 600;
     --font-weight-normal: 400;
     --gray-color: rgb(185, 185, 185);
+    --drop-shadow-button: drop-shadow(3px 3px 3px rgb(184, 184, 184));
 }
 
 html {
@@ -161,10 +162,10 @@ HEADER
 .hero-btn {
     text-align: center;
     text-decoration: none;
+    font-weight: var(--font-weight-medium);
     font-size: 1rem;
     border-radius: var(--radius);
-    padding: .9rem;
-    box-shadow: 1px 1px 1px var(--gray-color);
+    padding: .9em;
 }
 
 .hero-btn__pink {
@@ -179,7 +180,7 @@ HEADER
 }
 
 .hero-btn__white {
-    border: 1px solid var(--primary-color);
+    border: 1px solid rgb(233, 229, 229);
     background-color: #fff;
     color: var(--font-color);
 }
@@ -545,14 +546,9 @@ FOOTER
 
 }
 
-
-
 .lucide-heart{
     color: var(--primary-color);
-
 }
-
-
 
 .footer-list{
     display: flex;
@@ -570,4 +566,86 @@ FOOTER
     color: var(--paragraph-color);   
 }
 
+@media screen and (min-width: 48em) {
+     .menu--hidden,
+     .btn--hiden{
+        display: flex;
+        gap: 2.5em;
 
+     }
+
+     .navbar-kitten__menu{
+        list-style-type: none;
+    }
+    
+    .navbar-kitten__menu a{
+         text-decoration: none;
+         font-size: 1rem;
+         font-weight: var(--font-weight-normal);
+         color: var(--paragraph-color);
+         cursor: pointer;
+
+         transition: color .5s ease;
+     }
+
+     .navbar-kitten__menu a:hover{
+        color: var(--primary-color);
+     }
+
+     .icon-menu--disable{
+        display: none;
+     }
+
+     .header-kitten__btn{
+        text-decoration: none;
+        font-family: var(--font-title);
+        font-weight: var(--font-weight-medium);
+        font-size: 1rem;
+        padding: .5em 1.2em;
+        border-radius: var(--radius);
+        background-color: #f5a5b8;
+        color: var(--secondary);
+        cursor: default;
+        
+        transition: transform .3s ease-in-out,
+        filter .3s ease;
+     }
+
+     .header-kitten__btn:hover{
+        transform: scale(1.05) ;
+        filter: var(--drop-shadow-button);
+     }
+
+     .hero-kitten {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 2rem;
+     }
+
+     .hero-kitten__content{
+        grid-column: span 6;
+     }
+
+     .hero-kitten__img{
+        grid-column: span 6;
+     }
+
+     .hero-kitten__content h1{
+        font-size: 2.8rem;
+     }
+
+     .hero-kitten__btn{
+        flex-direction: row;
+        gap: 1.5em;
+     }
+
+     .hero-kitten__content p{
+        font-size: 1.3rem;
+     }
+
+     .hero-btn{
+         padding: 1rem;
+         font-size: 1.1rem;
+         border-radius: calc(var(--radius) + 1rem);
+     }
+}
