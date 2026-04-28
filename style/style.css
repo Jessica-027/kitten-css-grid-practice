@@ -6,11 +6,11 @@
 
 :root {
     --primary-color: #f5a5b8;
-    --secondary: #fdfbf9;
+    --secondary-color: #fdfbf9;
     --card-color: #ffffff;
     --font-color: #4a4a4a;
     --gray-color: rgb(185, 185, 185);
-    --background-assent: rgba(253, 235, 243, 0.6);
+    --background-accent: rgba(253, 235, 243, 0.6);
     --paragraph-color: #949494;
 
     --primary-font: "Inter", sans-serif;
@@ -32,8 +32,7 @@ html {
 
 body {
     min-height: 100dvh;
-    background-color: var(--secondary);
-    font-family: "Inter", sans-serif;
+    background-color: var(--secondary-color);
     color: var(--font-color);
     font-family: var(--primary-font);
     margin: 0;
@@ -69,7 +68,7 @@ HEADER
     align-items: center;
     margin: 0;
     grid-column: span 12;
-    background-color: color-mix(in srgb, var(--secondary), transparent 10%);
+    background-color: color-mix(in srgb, var(--secondary-color), transparent 10%);
     box-shadow: 2px 3px 2px rgb(243, 242, 242);
     /* border-bottom: 1px solid  rgb(230, 227, 227); */
     padding: .6em;
@@ -96,7 +95,7 @@ HEADER
 }
 
 .logo-kitten__icon {
-    background-color: var(--background-assent);
+    background-color: var(--background-accent);
     border-radius: 50%;
     padding: .1rem .2rem;
 }
@@ -109,7 +108,7 @@ HEADER
 
 .menu-btn {
     border: none;
-    background-color: var(--secondary);
+    background-color: var(--secondary-color);
 }
 
 /*====
@@ -130,7 +129,7 @@ HEADER
 
 .hero-kitten__span,
 .about-kitten__span {
-    background-color: var(--background-assent);
+    background-color: var(--background-accent);
     border-radius: var(--radius);
     padding: .6rem;
     font-size: .8rem;
@@ -148,15 +147,16 @@ HEADER
     font-family: var(--font-title);
     line-height: 1.3;
     letter-spacing: .05rem;
-    margin-right: 1em;
+    max-width: 20ch;
 }
 
 .hero-kitten__content p {
     font-size: var(--font-size-paragraph);
     font-weight: var(--font-weight-normal);
     color: var(--paragraph-color);
-    margin:0 0 1.4em 0;
-    line-height: 1.4;
+    margin: 1em 0;
+    line-height: 1.5;
+    max-width: 50ch;
     
 }
 
@@ -183,7 +183,7 @@ HEADER
 .hero-btn__pink {
     border: none;
     background-color: var(--primary-color);
-    color: var(--secondary);
+    color: var(--secondary-color);
 
     transition: transform .3s ease-in-out,
         filter .3s ease;
@@ -203,8 +203,8 @@ HEADER
 }
 
 .hero-kitten__img {
-    min-height: 10rem;
-    min-width: 15rem;
+    min-height: 10em;
+    min-width: 14em;
     filter: var(--drop-shadow-img);
     overflow: hidden;
     margin: 2em 0;
@@ -256,7 +256,7 @@ RESOURCES
 
 .resources-card__icon {
     display: inline-block;
-    background-color: var(--background-assent);
+    background-color: var(--background-accent);
     border-radius: 50%;
     padding: .5rem;
 }
@@ -329,7 +329,7 @@ RESOURCES
     padding: .9rem 1.3rem;
     border-radius: var(--radius);
     background-color: #4a4a4a;
-    color: var(--secondary);
+    color: var(--secondary-color);
 
     transition: transform .3s ease-in-out,
         filter .3s ease
@@ -442,7 +442,7 @@ RESOURCES
 
 .practice-kitten__icon {
     display: inline-block;
-    background-color: var(--background-assent);
+    background-color: var(--background-accent);
     padding: 1rem;
     border-radius: var(--radius);
     border: 1px solid var(--primary-color);
@@ -477,7 +477,7 @@ RESOURCES
     text-decoration: none;
     padding: 1.2rem;
     border-radius: var(--radius);
-    cursor: default;
+    cursor: pointer;
 
     transition: transform .3s ease-in-out,
         filter .3s ease;
@@ -486,7 +486,7 @@ RESOURCES
 
 .practice-btn__pink {
     background-color: var(--primary-color);
-    color: var(--secondary);
+    color: var(--secondary-color);
 
 }
 
@@ -497,7 +497,7 @@ RESOURCES
 
 .practice-btn__black {
     background-color: #4a4a4a;
-    color: var(--secondary);
+    color: var(--secondary-color);
 }
 
 .practice-kitten__span {
@@ -509,7 +509,7 @@ RESOURCES
 
 .practice-kitten__span span{
     color: var(--paragraph-color);
-    font-size: 0.875;
+    font-size: 0.875rem;
 }
 
 .practice-kitten__span span::before {
@@ -670,8 +670,8 @@ INFO
         padding: .5em 1.5em;
         border-radius: var(--radius);
         background-color: #f5a5b8;
-        color: var(--secondary);
-        cursor: default;
+        color: var(--secondary-color);
+        cursor: pointer;
 
         transition: transform .3s ease-in-out,
             filter .3s ease;
@@ -705,7 +705,7 @@ INFO
     .hero-btn {
         padding: .8em 1.8em;
         border-radius: calc(var(--radius) + 1rem);
-        cursor: default;
+        cursor: pointer;
     }
 
     .resources-kitten,
@@ -717,7 +717,6 @@ INFO
 
     .resources-kitten__card {
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: 1fr 1fr;
     }
 
     .resources-card {
@@ -786,10 +785,16 @@ INFO
 
     .hero-kitten__content h1 {
         font-size: 3.5rem;
-        padding-right: 2em;
+        max-width: 15ch;
     }
 
-
+    .hero-kitten__content {
+        align-content: center;
+    }
+    .hero-kitten__img{
+        min-width: 31.875em;
+        min-height: 31.875em;
+    }
 
     .resources-kitten__content h2,
     .practice-kitten__content h2 {
@@ -856,7 +861,45 @@ INFO
 }
 
 @media screen and (min-width: 80em) {
+
+    .hero-kitten__content{
+        align-content: center;
+    }
+
+    .hero-kitten__content h1{
+        padding-right: 0;
+        margin-right: 0;
+        font-size: 3.75rem;
+    }
+
+    .hero-kitten__content p{
+        margin-right: 5em;
+        
+    }
     
+   .hero-kitten__img{
+    min-height: 37em;
+    min-width: 37em;
+   }
+
+   .resources-kitten__content p {
+    margin: 0 15em;
+   }
+
+   .about-kitten__content h2{
+    margin-right: 10em;
+   }
+
+
+     .about-kitten__img {
+        min-width: 25.6875em;
+        min-height: 25.6875em;
+        margin: 5em 0;
+     }
+
+     .testimony-kitten__content p{
+        margin: 0 14em;
+     }
 }
 
 
